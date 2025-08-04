@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: rgb(9, 90, 229);
+}
+
+:root {
+  --color-primary: rgb(9, 90, 229);
+}
+
 body {
   overflow-x: hidden;
 }

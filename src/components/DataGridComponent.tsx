@@ -14,7 +14,7 @@ interface Props {
 export default function DataTable({ gridCols, data }: Props ) {
 
   return (
-    <Paper sx={{ height: 400, width: '100%' }}>
+    <Paper sx={{ width: '100%' }}>
       <DataGrid
         rows={data}
         columns={gridCols}
