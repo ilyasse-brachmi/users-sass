@@ -1,5 +1,7 @@
 import BreadCrumbsComponent from "@/components/BreadCrumbsComponent";
+import Toggle from "@/components/Toggle";
 import { getUsers } from "@/features/users/api";
+import UsersClient from "@/features/users/components/UsersClient";
 import UsersDataGrid from "@/features/users/components/UsersDataGrid";
 import UsersHeader from "@/features/users/components/UsersHeader";
 import { getQueryClient } from "@/services/get-query-client";
@@ -21,8 +23,9 @@ export default async function Users() {
           <BreadCrumbsComponent />
         </div>
         <UsersHeader />
-
-        <UsersDataGrid />
+        {/* <Toggle defaultValue="list" />
+        <UsersDataGrid /> */}
+        <UsersClient />
       </div>
     </HydrationBoundary>
   );
