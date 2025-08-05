@@ -27,8 +27,8 @@ A modern, full-featured user management system built with Next.js, TypeScript, a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/users-management-saas.git
-   cd users-management-saas
+   git clone git@github.com:ilyasse-brachmi/users-sass.git
+   cd users-sass
    ```
 
 2. **Install dependencies**
