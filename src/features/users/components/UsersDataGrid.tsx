@@ -10,26 +10,32 @@ import { User } from '@/types/users';
 import IconButton from '@mui/material/IconButton';
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import UserDetailsModal from './UserDetailsModal';
+import { FetchResponse } from '@/types/global';
 
+interface UsersDataGridProps {
+  currentPage: number;
+  itemsPerPage: number;
+}
 
-export default function DataTable() {
+export default function UsersDataGrid({ currentPage, itemsPerPage }: UsersDataGridProps) {
 
-  const { data } = useQuery({
-    queryKey: ['users'],
-    queryFn: getUsers
-  })
+  const { data } = useQuery<FetchResponse<User>>({
+    queryKey: ['users', currentPage, itemsPerPage],
+    queryFn: () => getUsers(currentPage, itemsPerPage),
+  });
 
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [open, setOpen] = useState(false);
+  
   const handleOpen = (user: User) => {
     setSelectedUser(user);
     setOpen(true);
   };
+  
   const handleClose = () => {
     setOpen(false);
     setSelectedUser(null);
   };
-
 
   const columns: GridColDef[] = [
     {
@@ -95,7 +101,7 @@ export default function DataTable() {
 
   return (
     <>
-      <DataGridComponent data={data} gridCols={columns} />
+      <DataGridComponent data={data?.data || []} gridCols={columns} />
       <UserDetailsModal open={open} onClose={handleClose} user={selectedUser} />
     </>
   );
