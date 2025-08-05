@@ -1,5 +1,5 @@
 export const getUsers = async () => {
-  const result = await fetch('https://reqres.in/api/users', {
+  const result = await fetch('https://reqres.in/api/users?per_page=10', {
     headers: {
       'Content-Type': 'application/json',
       'x-api-key': 'reqres-free-v1',

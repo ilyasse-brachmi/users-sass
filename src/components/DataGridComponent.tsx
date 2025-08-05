@@ -14,11 +14,15 @@ interface Props {
 export default function DataTable({ gridCols, data }: Props ) {
 
   return (
-    <Paper sx={{ width: '100%' }}>
+    <Paper sx={{ width: '100%', minHeight: 400 }}>
       <DataGrid
         rows={data}
         columns={gridCols}
-        initialState={{ pagination: { paginationModel } }}
+        initialState={{ 
+          pagination: { 
+            paginationModel: { pageSize: 10, page: 0 } 
+          } 
+        }}
         pageSizeOptions={[5, 10]}
         checkboxSelection
         sx={{ border: 0 }}
