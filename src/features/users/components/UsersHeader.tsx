@@ -33,11 +33,11 @@ const UsersHeader = () => {
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-2 p-2 border rounded-lg border-gray-200">
             <SearchIcon sx={{ color: '#767676' }} />
-            <input type="text" onChange={(e) => setInput(e.target.value)} placeholder="Search ..." className="border-0 outline-none bg-transparent" />
+            <input type="text" onChange={(e) => setInput(e.target.value)} placeholder="Search ..." className="max-w-40 sm:max-w-64 border-0 outline-none bg-transparent" />
           </div>
-          <button onClick={() => setOpen(true)} className="cursor-pointer flex gap-2 items-center bg-primary hover:bg-primary/80 duration-200 text-white rounded-lg px-4 py-2">
+          <button onClick={() => setOpen(true)} className="cursor-pointer flex-nowrap flex gap-2 items-center bg-primary hover:bg-primary/80 duration-200 text-white rounded-lg px-4 py-2">
             <AddIcon />
-            <span>Create User</span>
+            <span className="text-xs sm:text-sm lg:text-base">Create User</span>
           </button>
         </div>
       </div>

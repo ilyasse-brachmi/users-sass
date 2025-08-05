@@ -35,7 +35,7 @@ export default function UserDetailsModal({ open, onClose, user }: Props) {
       aria-labelledby="user-details-title"
       aria-describedby="user-details-description"
     >
-      <Box sx={{ ...style, width: 420 }}>
+      <Box sx={{ ...style, width: 400 }}>
         <Typography id="user-details-title" variant="h6" component="h2" gutterBottom sx={{ fontWeight: 600 }} >
           User details
         </Typography>

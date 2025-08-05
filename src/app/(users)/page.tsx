@@ -19,7 +19,7 @@ export default async function Users() {
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="py-2 container mx-auto flex flex-col gap-2 items-start justify-start w-screen h-screen">
-        <div className="mt-4">
+        <div className="mt-4 ms-2">
           <BreadCrumbsComponent />
         </div>
         <UsersHeader />

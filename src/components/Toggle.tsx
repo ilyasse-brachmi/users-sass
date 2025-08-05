@@ -47,13 +47,13 @@ export default function Toggle({
   const s = sizeMap[size];
 
   const commonButtonClasses =
-    "flex items-center justify-center transition-all duration-150 text-gray-600 focus:outline-none";
+    "flex items-center justify-center min-w-10 transition-all duration-150 text-gray-600 focus:outline-none";
 
   return (
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className={`inline-flex ${s.pad} ${s.gap} ${s.rounded} border-2 border-gray-300 bg-white ${className}`}
+      className={`inline-flex ${s.pad} ${s.gap} ${s.rounded} ms-2 border-2 border-gray-300 bg-white ${className}`}
     >
       <button
         ref={listRef}

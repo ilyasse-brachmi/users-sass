@@ -38,7 +38,7 @@ export default function UserCard({ data, className = "" }: Props) {
         className="h-20 w-full flex items-center justify-center"
         style={{
           background:
-            "linear-gradient(90deg,#CACACA 0%, #838383 100%)",
+            "linear-gradient(90deg,#EAEAEA 0%, #DADADA 100%)",
         }}
         aria-hidden
       >
